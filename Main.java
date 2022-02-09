@@ -1,8 +1,10 @@
-/*
+ /*
  * Program Title: User Proofing
- * Author: 
- * Date: 
+ * Author: Hayden Mankin
+ * Date: 2/8/2021
  * Purpose: Demonstrate how to use try-catch statements to enhance user proofing.
+ * Modified By: 
+ * Date Modified:
  */
 
 import java.util.*;
@@ -44,18 +46,15 @@ public class Main {
     return newAnimal;
   }
 
-  public static int getIntFromConsole() {
+  public static int getIntFromConsole(Scanner in) {
     // TODO: MODIFY THE CODE TO FORCE THE USER TO GIVE AN INTEGER. DO NOT LEAVE THIS METHOD UNTIL THE USER HAS ENTERED AN INTEGER.
-    Scanner in = new Scanner(System.in);
     int input = in.nextInt();
-    in.close();
+    in.nextLine();
     return input;
   }
 
-  public static String getStringFromConsole() {
-    Scanner in = new Scanner(System.in);
+  public static String getStringFromConsole(Scanner in) {
     String input = in.nextLine();
-    in.close();
     return input;
   }
 
@@ -70,8 +69,10 @@ public class Main {
   }
 
   public static void main(String[] args) {
+    Scanner in = new Scanner(System.in);
+    
     System.out.print("How many files would you like me to read? ");
-    int numAnimals = getIntFromConsole();
+    int numAnimals = getIntFromConsole(in);
 
     ArrayList<Animal> animals = new ArrayList<>();
 
@@ -79,7 +80,10 @@ public class Main {
 
     // TODO: USER PROOF. KEEP ASKING USER UNTIL A VALID FILE IS GIVEN
     System.out.print("Enter a file name: ");
-    String fileName = getStringFromConsole();
+    String fileName = getStringFromConsole(in);
+    
+    in.close();
+    
     fileIn = new Scanner(new File(fileName));
 
     // TODO: USER PROOF. IF THE FILE IS NOT FORMATTED CORRECTLY PRINT AN ERROR MESSAGE AND CONTINUE RUNNING THE PROGRAM. THIS **WILL** COUNT AS A FILE IN THE COUNT numAnimals
