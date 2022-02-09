@@ -1,4 +1,4 @@
-# Template Assignment
+# User Proofing
 
 ## Problem Statement
 
