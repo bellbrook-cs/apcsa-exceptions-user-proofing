@@ -2,9 +2,93 @@
 
 ## Problem Statement
 
+The included project contains some code that reads in files containing different animals properties. Each file contains 1 and only 1 animal.
+
+Your goal is to look through the code and finish "User-Proofing" the code.
+
+Each portion that you need to modify is marked with a comment similar to the following:
+
+```java
+// TODO: some description of the problem
+```
+
+I suggest you follow this order in completing this lab:
+
+1. Use a try-catch structure to check whether the file entered by the user exists.
+2. Use a loop to continue asking for a file name until a valid file name is entered by the user.
+3. Use a loop and a try-catch structure to ensure a proper integer is given inside of the `getIntFromConsole` method. Don't return anything, or leave the method until the user enters an integer.
+4. Try running the program a few times, and seeing how the program acts with the different sampleX.txt files.
+5. Add the throws clause to the different methods: `getIntFromFile`, `getBooleanFromFile`, and `readAnimalFromFile`
+6. Use a try-catch structure to stop the program from ending when you call `readAnimalFromFile`
+   - Make sure you print some error to console explaining the file was not formatted correctly.
+   - Only add **valid** animals to the array list.
+7. Modify the `getIntFromConsole` method to be user proofed. Don't return anything or end the method until the user enters a proper integer.
+   - Keep telling the user there was an error and re prompt the user for another attempt.
+
 ## Input Description
 
+The files included can serve as your input. I have included multiple files that should cause a couple different errors that should be accounted for.
+
+The input files should be in the following format:
+
+```
+Name (String)
+Species (String)
+Noise (String)
+number of legs (int)
+vegetarian (boolean)
+
+```
+
 ## Sample Input/Output
+
+### Sample Input
+
+animal1.txt
+
+- Should run fine, and contain no errors.
+
+animal2.txt
+
+- Should run fine, and contain no errors.
+
+animal3.txt
+
+- Is not formatted correctly.
+- You will likely get an exception because there are not enough entries.
+
+animal4.txt
+
+- Is not formatted correctly.
+- You will likely get an exception becuase the number of legs is not an int.
+
+animal5.txt
+
+- Is not formatted correctly.
+- You will likely get an exception because there is not new line at the end of the file.
+
+### Sample Output
+
+The following is an example run of the program that handles all errors properly:
+
+```
+How many files would you like me to read? 5.0
+Sorry, that doesn't look like an integer. Try again: a
+Sorry, that doesn't look like an integer. Try again: 5
+Enter a file name: animal1.txt
+Enter a file name: animal2.txt
+Enter a file name: animal3.txt
+ERROR: It looks like the file was not formatted correctly.
+Enter a file name: animal4.txt
+ERROR: It looks like the file was not formatted correctly.
+Enter a file name: animal5.txt
+ERROR: It looks like the file was not formatted correctly.
+I am a Dog named Geoff.
+I am a Cat named Fluffy.
+
+Woof
+
+```
 
 ## Submission
 
