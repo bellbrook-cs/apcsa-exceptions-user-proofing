@@ -12,28 +12,27 @@ import java.io.*;
 
 public class Main {
   static Scanner fileIn;
-
-  // ADD A THROWS CLAUSE FOR ANY POSSIBLE EXCEPTIONS THAT MIGHT POP UP. BE SPECIFIC DON'T JUST USE `EXCEPTION` OR `IOEXCEPTION`
+ 
   public static String getStringFromFile() {
     String input = fileIn.nextLine();
     return input;
   }
 
-  // ADD A THROWS CLAUSE FOR ANY POSSIBLE EXCEPTIONS THAT MIGHT POP UP. BE SPECIFIC DON'T JUST USE `EXCEPTION` OR `IOEXCEPTION`
+  // TODO: ADD A THROWS CLAUSE FOR ANY POSSIBLE EXCEPTIONS THAT MIGHT POP UP.
   public static int getIntFromFile() {
     int input = fileIn.nextInt();
     fileIn.nextLine();
     return input;
   }
 
-  // ADD A THROWS CLAUSE FOR ANY POSSIBLE EXCEPTIONS THAT MIGHT POP UP. BE SPECIFIC DON'T JUST USE `EXCEPTION` OR `IOEXCEPTION`
+  // TODO: ADD A THROWS CLAUSE FOR ANY POSSIBLE EXCEPTIONS THAT MIGHT POP UP.
   public static boolean getBooleanFromFile() {
     boolean input = fileIn.nextBoolean();
     fileIn.nextLine();
     return input;
   }
 
-  // ADD A THROWS CLAUSE FOR ANY POSSIBLE EXCEPTIONS THAT MIGHT POP UP. BE SPECIFIC DON'T JUST USE `Exception` OR `IOException`
+  // TODO: ADD A THROWS CLAUSE FOR ANY POSSIBLE EXCEPTIONS THAT MIGHT POP UP.
   public static Animal readAnimalFromFile() {
     String name = getStringFromFile();
     String species = getStringFromFile();
